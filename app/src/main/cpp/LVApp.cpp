@@ -86,7 +86,7 @@ void LVApp::lv_loop_task() {
     lv_display_set_user_data(disp, this);
     lv_display_set_flush_cb(disp, LVApp::lv_flush_cb_static);
 
-    size_t buf_size = 10 * app_width * app_height;
+    size_t buf_size = sizeof(lv_color_t) * app_width * app_height;
     auto *buf = malloc(buf_size);
     lv_display_set_buffers(disp, buf, nullptr, buf_size, LV_DISPLAY_RENDER_MODE_PARTIAL);
 
