@@ -8,6 +8,14 @@ Embedded graphics library to create beautiful UIs for any MCU, MPU and display t
 a professional yet affordable drag and drop UI editor, called SquareLine Studio.
 
 ### Details
+
 * https://github.com/lvgl/lvgl
 * https://github.com/fbiego/esp32-c3-mini
+
+### More Info
+
+* images
+  ![image](https://cdn.jsdelivr.net/gh/zhuhai-and/LVGL9AndroidDemo/misc/screen.gif "image")
+
+* [`Demo online`](https://cdn.jsdelivr.net/gh/zhuhai-and/LVGL9AndroidDemo/misc/web/index.html)
 
