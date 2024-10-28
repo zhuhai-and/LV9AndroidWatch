@@ -14,8 +14,8 @@ a professional yet affordable drag and drop UI editor, called SquareLine Studio.
 
 ### More Info
 
-* images
-  ![image](https://cdn.jsdelivr.net/gh/zhuhai-and/LVGL9AndroidDemo/misc/screen.gif "image")
+* images</br>
+  ![image](https://cdn.jsdelivr.net/gh/zhuhai-and/LV9AndroidWatch/misc/screen.gif "image")
 
-* [`Demo online`](https://cdn.jsdelivr.net/gh/zhuhai-and/LVGL9AndroidDemo/misc/web/index.html)
+* [`Demo online`](https://cdn.jsdelivr.net/gh/zhuhai-and/LV9AndroidWatch/misc/web/index.html)
 
