@@ -14,8 +14,8 @@ android {
         applicationId "com.hzy.lvgl9.watch"
         minSdkVersion 21
         targetSdkVersion 34
-        versionCode 1_00_03
-        versionName "1.0.3"
+        versionCode 1_00_04
+        versionName "1.0.4"
         externalNativeBuild {
             ndk {
                 abiFilters "armeabi-v7a", "arm64-v8a"
@@ -41,6 +41,11 @@ android {
             signingConfig signingConfigs.demokey
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    flavorDimensions "default"
+    productFlavors {
+        ShowCase {}
+        Watchface {}
     }
     applicationVariants.configureEach { variant ->
         variant.outputs.configureEach {

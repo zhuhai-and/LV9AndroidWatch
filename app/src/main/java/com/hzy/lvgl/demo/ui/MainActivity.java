@@ -5,7 +5,6 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.blankj.utilcode.util.ActivityUtils;
 import com.hzy.lvgl.demo.databinding.ActivityMainBinding;
 
 
@@ -18,21 +17,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mB = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mB.getRoot());
-        mB.btnWatchface240.setOnClickListener(v -> openPartPage("watch", 240, 240));
-        mB.btnWatchface280.setOnClickListener(v -> openPartPage("watch", 240, 280));
-        mB.btnWidgets240.setOnClickListener(v -> openPartPage("widgets", 240, 240));
-        mB.btnWidgets.setOnClickListener(v -> openPartPage("widgets"));
-        mB.btnMusic.setOnClickListener(v -> openPartPage("music"));
-        mB.btnBenchmark.setOnClickListener(v -> openPartPage("benchmark"));
-        mB.btnLarge.setOnClickListener(v -> ActivityUtils.startActivity(FullScreenActivity.class));
+        mB.btnWatchface240.setOnClickListener(v -> openLVPage(PartScreenActivity.class, "watch", 240, 240));
+        mB.btnWatchface280.setOnClickListener(v -> openLVPage(PartScreenActivity.class, "watch", 240, 280));
+        mB.btnWidgets240.setOnClickListener(v -> openLVPage(PartScreenActivity.class, "widgets", 240, 240));
+        mB.btnWidgets.setOnClickListener(v -> openLVPage(PartScreenActivity.class, "widgets", 800, 480));
+        mB.btnMusic.setOnClickListener(v -> openLVPage(PartScreenActivity.class, "music", 800, 480));
+        mB.btnBenchmark.setOnClickListener(v -> openLVPage(PartScreenActivity.class, "benchmark", 800, 480));
+        mB.btnLarge.setOnClickListener(v -> openLVPage(FullScreenActivity.class, "widgets", 800, 480));
     }
 
-    private void openPartPage(String name) {
-        openPartPage(name, 480, 320);
-    }
-
-    private void openPartPage(String name, int width, int height) {
-        Intent intent = new Intent(this, PartScreenActivity.class);
+    private void openLVPage(Class<?> activity, String name, int width, int height) {
+        Intent intent = new Intent(this, activity);
         intent.putExtra("app", name);
         intent.putExtra("width", width);
         intent.putExtra("height", height);
